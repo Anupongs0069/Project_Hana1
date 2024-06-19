@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import SinfgIn from './pages/backoffice/SingIn';
+import SignIn from './pages/backoffice/SignIn';
+import Home from './pages/backoffice/Home';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <SinfgIn />
+    element: <SignIn />
+  },
+  {
+    path: '/home',
+    element: <Home />
   }
 ]); 
 
