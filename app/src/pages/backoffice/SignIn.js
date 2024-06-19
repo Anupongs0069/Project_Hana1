@@ -41,7 +41,7 @@ function SignIn() {
                     <div class="card-body login-card-body">
                         <p class="login-box-msg">Sign in to start your session</p>
 
-                        <form action="../../index3.html" method="post">
+                        <div action="../../index3.html" method="post">
                             <div class="input-group mb-3">
                                 <input type="email" class="form-control" placeholder="Email" onChange={e => setUser({ ...user, user: e.target.value })} />
                                 <div class="input-group-append">
@@ -71,7 +71,7 @@ function SignIn() {
                                     <button type="submit" class="btn btn-primary btn-block" onClick={handleSignIn}>Sign In</button>
                                 </div>
                             </div>
-                        </form>
+                        </div>
 
                         <p class="mb-1">
                             <a href="forgot-password.html">I forgot my password</a>
