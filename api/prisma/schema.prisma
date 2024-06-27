@@ -20,3 +20,19 @@ model User {
   pass String
   status String @default("use")
 }
+
+model Product {
+  id Int @id() @default(autoincrement())
+  fixtureId String
+  fixtureName String
+  operation String
+  side String
+  comp String
+  document String
+  family String
+  cusNum String
+  hanaNum String
+  productDes String
+  img String
+  status String @default("use")
+}
