@@ -32,7 +32,7 @@ function Product() {
             if (res.data.newName !== undefined) {
                 return res.data.newName;
             }
-        } catch (e) {
+        } catch (e) {          
             Swal.fire({
                 title: 'error',
                 text: e.message,
@@ -82,7 +82,6 @@ function Product() {
     const fetchData = async () => {
         try {
             const res = await axios.get(config.apiPath + '/product/list', config.headers());
-            console.log(res.data);
             if (res.data.results !== undefined) {
                 setProducts(res.data.results);
             }
@@ -183,6 +182,8 @@ function Product() {
                 });
 
                 fetchData();
+
+                document.getElementById('modalExcel_btnClose').click();
             }
         } catch (e) {
             Swal.fire({
@@ -297,6 +298,7 @@ function Product() {
                 <input value={product.productDes} className="form-control" onChange={e => setProduct({ ...product, productDes: e.target.value })} />
             </div>
             <div>
+                <div className="mb-2">{showImage(product)}</div>
                 <div>Image</div>
                 <input className="form-control" type="file" ref={refImg} onChange={e => selectedFile(e.target.files)} />
             </div>
